@@ -1,0 +1,26 @@
+h1. Gowalla explorer (macruby flavour)
+
+VERY ROUGH MATERIAL HERE
+
+Objectives:
+
+* explore gowalla API
+* explore macruby
+* explore cocoa webviews and javascript integration
+
+Latest build available on downloads (OSX 10.6 + x86_64 only)
+
+h2. Features
+
+* OS X 10.6 only, probably x86_64 only too
+* shows a map with current spots
+* tries to find your location using snow leopard's API
+* allows you to search for an address
+* allows you to checkin at a random location
+
+h2. TODO
+
+* only allows to checkin at 1 place, need to restart app
+* verify login credentials before continue
+* polish :)
+
