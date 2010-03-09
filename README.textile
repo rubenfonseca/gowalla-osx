@@ -1,4 +1,4 @@
-h1. Gowalla explorer (macruby flavour)
+h1. Gowalla client(ish) for OS X with a MacRuby flavor
 
 VERY ROUGH MATERIAL HERE
 
