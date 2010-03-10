@@ -18,6 +18,13 @@ h2. Features
 * allows you to search for an address
 * allows you to checkin at a random location
 
+h2. Screenshots
+
+!http://0x82.blog.s3.amazonaws.com/10032010/1.png!
+!http://0x82.blog.s3.amazonaws.com/10032010/2.png!
+!http://0x82.blog.s3.amazonaws.com/10032010/3.png!
+!http://0x82.blog.s3.amazonaws.com/10032010/4.png!
+
 h2. TODO
 
 * verify login credentials before continue
