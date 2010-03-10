@@ -49,6 +49,8 @@
 		3E76441B1147D0D500D49E69 /* CheckinResultView.rb in Resources */ = {isa = PBXBuildFile; fileRef = 3E76441A1147D0D500D49E69 /* CheckinResultView.rb */; };
 		3E7644241147DED900D49E69 /* CheckinResult.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E7644231147DED900D49E69 /* CheckinResult.xib */; };
 		3EDC86AA1147EE6800605E37 /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 3EDC86A81147EE6800605E37 /* index.html */; };
+		3EDC86C11147F34900605E37 /* NSStringAdditions.rb in Resources */ = {isa = PBXBuildFile; fileRef = 3EDC86C01147F34900605E37 /* NSStringAdditions.rb */; };
+		3EDC86F41147F60000605E37 /* find.js in Resources */ = {isa = PBXBuildFile; fileRef = 3EDC86A71147EE6800605E37 /* find.js */; };
 		3EE2302E1141D34D00933AAB /* GowallaDelegate.rb in Resources */ = {isa = PBXBuildFile; fileRef = 3EE2302D1141D34D00933AAB /* GowallaDelegate.rb */; };
 		3EE230341141D39600933AAB /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EE230331141D39600933AAB /* WebKit.framework */; };
 		3EF000C7114587B300BCF241 /* Gems in Resources */ = {isa = PBXBuildFile; fileRef = 3EF000A8114587B300BCF241 /* Gems */; };
@@ -79,8 +81,9 @@
 		3E5468491144314300E45FA3 /* Gowalla.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = Gowalla.rb; sourceTree = "<group>"; };
 		3E76441A1147D0D500D49E69 /* CheckinResultView.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = CheckinResultView.rb; sourceTree = "<group>"; };
 		3E7644231147DED900D49E69 /* CheckinResult.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CheckinResult.xib; sourceTree = "<group>"; };
-		3EDC86A71147EE6800605E37 /* find.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = find.js; path = Views/find.js; sourceTree = SOURCE_ROOT; };
+		3EDC86A71147EE6800605E37 /* find.js */ = {isa = PBXFileReference; explicitFileType = sourcecode.javascript; fileEncoding = 4; name = find.js; path = Views/find.js; sourceTree = SOURCE_ROOT; };
 		3EDC86A81147EE6800605E37 /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = index.html; path = Views/index.html; sourceTree = SOURCE_ROOT; };
+		3EDC86C01147F34900605E37 /* NSStringAdditions.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = NSStringAdditions.rb; sourceTree = "<group>"; };
 		3EE2302D1141D34D00933AAB /* GowallaDelegate.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = GowallaDelegate.rb; sourceTree = "<group>"; };
 		3EE230331141D39600933AAB /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		3EF000A8114587B300BCF241 /* Gems */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Gems; sourceTree = "<group>"; };
@@ -124,6 +127,7 @@
 				3E546844114430B000E45FA3 /* MacrubyHttp.rb */,
 				3E5468491144314300E45FA3 /* Gowalla.rb */,
 				3E76441A1147D0D500D49E69 /* CheckinResultView.rb */,
+				3EDC86C01147F34900605E37 /* NSStringAdditions.rb */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -287,6 +291,7 @@
 			files = (
 				8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */,
 				4DE339F70D74FCDD00ADB6EE /* rb_main.rb in Resources */,
+				3EDC86F41147F60000605E37 /* find.js in Resources */,
 				2BFA9DA710CDF852007972A1 /* MainMenu.xib in Resources */,
 				3EE2302E1141D34D00933AAB /* GowallaDelegate.rb in Resources */,
 				3E546845114430B000E45FA3 /* MacrubyHttp.rb in Resources */,
@@ -295,6 +300,7 @@
 				3E76441B1147D0D500D49E69 /* CheckinResultView.rb in Resources */,
 				3E7644241147DED900D49E69 /* CheckinResult.xib in Resources */,
 				3EDC86AA1147EE6800605E37 /* index.html in Resources */,
+				3EDC86C11147F34900605E37 /* NSStringAdditions.rb in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

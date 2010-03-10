@@ -18,8 +18,8 @@ map.clearMarkers();
 
 <% spots.each do |spot| %>
   latlng = new google.maps.LatLng(<%= spot.lat.doubleValue %>, <%= spot.lng.doubleValue %>);
-  content = "<a href=\"javascript:window.gowalladelegate.checkin_(<%= spot.url.gsub(%r{/spots/}, '') %>, <%= spot.lat.doubleValue %>, <%= spot.lng.doubleValue %>);\"><%= spot.name %></a>";
-  imageurl = "<%= spot.image_url %>";
+  content = "<%= spot.name.escape_javascript %> <a href=\"javascript:window.gowalladelegate.checkin_(<%= spot.url.gsub(%r{/spots/}, '').escape_javascript %>, <%= spot.lat.doubleValue %>, <%= spot.lng.doubleValue %>);\">(check in)</a>";
+  imageurl = "<%= spot.image_url.escape_javascript %>";
   
   add_marker(latlng, content, imageurl);
 <% end %>
