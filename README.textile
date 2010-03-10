@@ -20,7 +20,6 @@ h2. Features
 
 h2. TODO
 
-* only allows to checkin at 1 place, need to restart app
 * verify login credentials before continue
 * polish :)
 
