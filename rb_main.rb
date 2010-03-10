@@ -10,6 +10,12 @@
 # do that here too.
 framework 'Cocoa'
 
+if (Dir.exist?(NSBundle.mainBundle.privateFrameworksPath))
+  $:.map! { |x| 
+    x.sub(/^\/Library\/Frameworks/, NSBundle.mainBundle.privateFrameworksPath) }
+  $:.unshift NSBundle.mainBundle.resourcePath.fileSystemRepresentation
+end
+
 Dir.glob(File.expand_path('../Gems/*', __FILE__)).each do |gem|
   $LOAD_PATH.unshift File.join(gem, 'lib')
 end

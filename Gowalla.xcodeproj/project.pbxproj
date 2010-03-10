@@ -36,6 +36,7 @@
 				4D1A51A410A4FF640046A98A /* ShellScript */,
 			);
 			dependencies = (
+				3E98574B1148235E00272EC3 /* PBXTargetDependency */,
 			);
 			name = Embed;
 			productName = Embed;
@@ -68,6 +69,16 @@
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3E98574A1148235E00272EC3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8D1107260486CEB800E47090 /* Gowalla */;
+			remoteInfo = Gowalla;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		089C165DFE840E0CC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -353,7 +364,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# The macruby_deploy command-line tool with the --embed argument will make sure the MacRuby framework will be embedded in your .app. Default options will be used. Pass the -h option to get more information.\nPATH=\"$PATH:/usr/local/bin\" macruby_deploy --embed \"$TARGET_BUILD_DIR/$PROJECT_NAME.app\"";
+			shellScript = "PATH=\"$PATH:/usr/local/bin\" macruby_deploy --embed --compile \"$TARGET_BUILD_DIR/$PROJECT_NAME.app\"\n \ninstall_name_tool -change /Library/Frameworks/MacRuby.framework/Versions/0.5/usr/lib/libmacruby.dylib \"@executable_path/../Frameworks/MacRuby.framework/Versions/0.5/usr/lib/libmacruby.dylib\" \"$TARGET_BUILD_DIR/$PROJECT_NAME.app/Contents/MacOS/$PROJECT_NAME\"\n \nfor F in $TARGET_BUILD_DIR/$PROJECT_NAME.app/Contents/Resources/*.rbo; do\n  install_name_tool -change /Library/Frameworks/MacRuby.framework/Versions/0.5/usr/lib/libmacruby.dylib \"@executable_path/../Frameworks/MacRuby.framework/Versions/0.5/usr/lib/libmacruby.dylib\" \"$F\"\ndone";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -374,6 +385,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3E98574B1148235E00272EC3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8D1107260486CEB800E47090 /* Gowalla */;
+			targetProxy = 3E98574A1148235E00272EC3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		089C165CFE840E0CC02AAC07 /* InfoPlist.strings */ = {
