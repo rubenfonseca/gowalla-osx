@@ -23,7 +23,7 @@ class GowallaDelegate
   end
   
   def applicationWillTerminate(notification)
-    @locationManager.stopUpdatingLocation if @locationManager
+    stopUpdatingLocation
   end
   
   # Credentials delegate
@@ -59,7 +59,7 @@ class GowallaDelegate
   end
   
   def geocodeAddress(sender)
-	@locationManager.stopUpdatingLocation
+	stopUpdatingLocation
 	
 	progressView.startAnimation(self)
 	self.webView.stringByEvaluatingJavaScriptFromString("geocode(\"#{sender.stringValue}\");")
@@ -91,9 +91,8 @@ class GowallaDelegate
     updateMap(newLocation.betterCoordinates['latitude'].doubleValue, newLocation.betterCoordinates['longitude'].doubleValue)
 	self.progressView.stopAnimation(self)
 	self.searchField.cell.setPlaceholderString("")
-	
-	@locationManager.stopUpdatingLocation
-	@locationManager = nil
+
+	stopUpdatingLocation
   end
   
   def locationManager(manager, didFailWithError:error)
@@ -101,8 +100,7 @@ class GowallaDelegate
 	self.progressView.stopAnimation(self)
 	self.searchField.cell.setPlaceholderString("Couldn't find your location")
 	
-	@locationManager.stopUpdatingLocation
-	@locationManager = nil
+	stopUpdatingLocation
   end
   
   private
@@ -122,6 +120,13 @@ class GowallaDelegate
 	
 	js = ERB.new(template).result(binding)
 	self.webView.stringByEvaluatingJavaScriptFromString(js)
+  end
+  
+  def stopUpdatingLocation
+    if @locationManager
+	  @locationManager.stopUpdatingLocation
+	  @locationManager = nil
+    end
   end
 end
 
