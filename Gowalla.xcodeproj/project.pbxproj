@@ -46,6 +46,8 @@
 		2BFA9DA710CDF852007972A1 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2BFA9DA510CDF852007972A1 /* MainMenu.xib */; };
 		3E546845114430B000E45FA3 /* MacrubyHttp.rb in Resources */ = {isa = PBXBuildFile; fileRef = 3E546844114430B000E45FA3 /* MacrubyHttp.rb */; };
 		3E54684A1144314300E45FA3 /* Gowalla.rb in Resources */ = {isa = PBXBuildFile; fileRef = 3E5468491144314300E45FA3 /* Gowalla.rb */; };
+		3E76441B1147D0D500D49E69 /* CheckinResultView.rb in Resources */ = {isa = PBXBuildFile; fileRef = 3E76441A1147D0D500D49E69 /* CheckinResultView.rb */; };
+		3E7644241147DED900D49E69 /* CheckinResult.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E7644231147DED900D49E69 /* CheckinResult.xib */; };
 		3EE2302E1141D34D00933AAB /* GowallaDelegate.rb in Resources */ = {isa = PBXBuildFile; fileRef = 3EE2302D1141D34D00933AAB /* GowallaDelegate.rb */; };
 		3EE230341141D39600933AAB /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EE230331141D39600933AAB /* WebKit.framework */; };
 		3EF0003F1145845600BCF241 /* find.js in Resources */ = {isa = PBXBuildFile; fileRef = 3EF0003E1145845600BCF241 /* find.js */; };
@@ -76,6 +78,8 @@
 		2BFA9DA610CDF852007972A1 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		3E546844114430B000E45FA3 /* MacrubyHttp.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = MacrubyHttp.rb; sourceTree = "<group>"; };
 		3E5468491144314300E45FA3 /* Gowalla.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = Gowalla.rb; sourceTree = "<group>"; };
+		3E76441A1147D0D500D49E69 /* CheckinResultView.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = CheckinResultView.rb; sourceTree = "<group>"; };
+		3E7644231147DED900D49E69 /* CheckinResult.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CheckinResult.xib; sourceTree = "<group>"; };
 		3EE2302D1141D34D00933AAB /* GowallaDelegate.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = GowallaDelegate.rb; sourceTree = "<group>"; };
 		3EE230331141D39600933AAB /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		3EF0003E1145845600BCF241 /* find.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = find.js; sourceTree = "<group>"; };
@@ -120,6 +124,7 @@
 				3EE2302D1141D34D00933AAB /* GowallaDelegate.rb */,
 				3E546844114430B000E45FA3 /* MacrubyHttp.rb */,
 				3E5468491144314300E45FA3 /* Gowalla.rb */,
+				3E76441A1147D0D500D49E69 /* CheckinResultView.rb */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -193,6 +198,7 @@
 				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
 				3EFFB5F2114406B000B29EBE /* index.html */,
 				3EF0003E1145845600BCF241 /* find.js */,
+				3E7644231147DED900D49E69 /* CheckinResult.xib */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -281,6 +287,8 @@
 				3E54684A1144314300E45FA3 /* Gowalla.rb in Resources */,
 				3EF0003F1145845600BCF241 /* find.js in Resources */,
 				3EF000C7114587B300BCF241 /* Gems in Resources */,
+				3E76441B1147D0D500D49E69 /* CheckinResultView.rb in Resources */,
+				3E7644241147DED900D49E69 /* CheckinResult.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -67,7 +67,7 @@ class GowallaDelegate
   
   def checkin(spot_id, lat, lng)
 	@client.checkin(:spot_id => spot_id, :lat => lat, :lng => lng) do |response|
-	  self.webView.mainFrame.loadHTMLString(response.bonus_html, baseURL:nil)
+	  CheckinResultView.new.showCheckin(main_window, response)
 	  puts "Success :)"
 	end
   end
