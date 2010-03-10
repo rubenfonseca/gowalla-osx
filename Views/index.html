@@ -39,6 +39,9 @@
 			
 			google.maps.event.addListener(map, 'dragend', update_map);
 			google.maps.event.addListener(map, 'idle', update_map);
+			google.maps.event.addListener(map, 'idle', function() {
+			  window.gowalladelegate.startLocating_();
+			});
 		});
 		
 		function update_map() {

@@ -20,6 +20,7 @@ class GowallaDelegate
 	self.respondsToSelector("updateMap:")
 	self.respondsToSelector("searchAddress:")
 	self.respondsToSelector("checkin:")
+	self.respondsToSelector("startLocating:")
   end
   
   def applicationWillTerminate(notification)
@@ -29,10 +30,6 @@ class GowallaDelegate
   # Credentials delegate
   def submitCredentials(sender)
 	self.progressView.startAnimation(self)
-	
-	@locationManager = CLLocationManager.alloc.init
-	@locationManager.delegate = self
-	@locationManager.startUpdatingLocation
 	
 	loadMap
 	
@@ -80,6 +77,12 @@ class GowallaDelegate
 	  NSLog("Success :)")
 	end
   end
+  
+  def startLocating(sender)
+	@locationManager = CLLocationManager.alloc.init
+	@locationManager.delegate = self
+	@locationManager.startUpdatingLocation
+  end
      
   # WebScript informal protocol
   def self.isSelectorExcludedFromWebScript(selector)
@@ -88,6 +91,7 @@ class GowallaDelegate
  
   # Location delegate
   def locationManager(manager, didUpdateToLocation:newLocation, fromLocation:oldLocation)
+    self.webView.stringByEvaluatingJavaScriptFromString("map.panTo(new google.maps.LatLng(#{newLocation.betterCoordinates['latitude'].doubleValue}, #{newLocation.betterCoordinates['longitude'].doubleValue});")
     updateMap(newLocation.betterCoordinates['latitude'].doubleValue, newLocation.betterCoordinates['longitude'].doubleValue)
 	self.progressView.stopAnimation(self)
 	self.searchField.cell.setPlaceholderString("")
