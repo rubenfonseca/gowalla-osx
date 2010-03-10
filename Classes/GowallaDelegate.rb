@@ -91,7 +91,7 @@ class GowallaDelegate
 
   # Location delegate
   def locationManager(manager, didUpdateToLocation:newLocation, fromLocation:oldLocation)
-    self.webView.stringByEvaluatingJavaScriptFromString("map.panTo(new google.maps.LatLng(#{newLocation.betterCoordinates['latitude'].doubleValue}, #{newLocation.betterCoordinates['longitude'].doubleValue});")
+    self.webView.stringByEvaluatingJavaScriptFromString("map.panTo(new google.maps.LatLng(#{newLocation.betterCoordinates['latitude'].doubleValue}, #{newLocation.betterCoordinates['longitude'].doubleValue}));")
     updateMap(newLocation.betterCoordinates['latitude'].doubleValue, newLocation.betterCoordinates['longitude'].doubleValue)
     self.progressView.stopAnimation(self)
     self.searchField.cell.setPlaceholderString("")
