@@ -51,6 +51,8 @@
 		3EDC86AA1147EE6800605E37 /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 3EDC86A81147EE6800605E37 /* index.html */; };
 		3EDC86C11147F34900605E37 /* NSStringAdditions.rb in Resources */ = {isa = PBXBuildFile; fileRef = 3EDC86C01147F34900605E37 /* NSStringAdditions.rb */; };
 		3EDC86F41147F60000605E37 /* find.js in Resources */ = {isa = PBXBuildFile; fileRef = 3EDC86A71147EE6800605E37 /* find.js */; };
+		3EDC87361147FA7100605E37 /* CLLocation-Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EDC87351147FA7100605E37 /* CLLocation-Utilities.m */; };
+		3EDC877F1147FD5800605E37 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EDC877E1147FD5800605E37 /* CoreLocation.framework */; };
 		3EE2302E1141D34D00933AAB /* GowallaDelegate.rb in Resources */ = {isa = PBXBuildFile; fileRef = 3EE2302D1141D34D00933AAB /* GowallaDelegate.rb */; };
 		3EE230341141D39600933AAB /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EE230331141D39600933AAB /* WebKit.framework */; };
 		3EF000C7114587B300BCF241 /* Gems in Resources */ = {isa = PBXBuildFile; fileRef = 3EF000A8114587B300BCF241 /* Gems */; };
@@ -84,6 +86,9 @@
 		3EDC86A71147EE6800605E37 /* find.js */ = {isa = PBXFileReference; explicitFileType = sourcecode.javascript; fileEncoding = 4; name = find.js; path = Views/find.js; sourceTree = SOURCE_ROOT; };
 		3EDC86A81147EE6800605E37 /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = index.html; path = Views/index.html; sourceTree = SOURCE_ROOT; };
 		3EDC86C01147F34900605E37 /* NSStringAdditions.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = NSStringAdditions.rb; sourceTree = "<group>"; };
+		3EDC87341147FA7100605E37 /* CLLocation-Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CLLocation-Utilities.h"; sourceTree = "<group>"; };
+		3EDC87351147FA7100605E37 /* CLLocation-Utilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CLLocation-Utilities.m"; sourceTree = "<group>"; };
+		3EDC877E1147FD5800605E37 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = /System/Library/Frameworks/CoreLocation.framework; sourceTree = "<absolute>"; };
 		3EE2302D1141D34D00933AAB /* GowallaDelegate.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = GowallaDelegate.rb; sourceTree = "<group>"; };
 		3EE230331141D39600933AAB /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		3EF000A8114587B300BCF241 /* Gems */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Gems; sourceTree = "<group>"; };
@@ -114,6 +119,7 @@
 				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
 				4DE3BE140D8651D900ECA448 /* MacRuby.framework in Frameworks */,
 				3EE230341141D39600933AAB /* WebKit.framework in Frameworks */,
+				3EDC877F1147FD5800605E37 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -128,6 +134,8 @@
 				3E5468491144314300E45FA3 /* Gowalla.rb */,
 				3E76441A1147D0D500D49E69 /* CheckinResultView.rb */,
 				3EDC86C01147F34900605E37 /* NSStringAdditions.rb */,
+				3EDC87341147FA7100605E37 /* CLLocation-Utilities.h */,
+				3EDC87351147FA7100605E37 /* CLLocation-Utilities.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -138,6 +146,7 @@
 				4DE3BE130D8651D900ECA448 /* MacRuby.framework */,
 				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
 				3EE230331141D39600933AAB /* WebKit.framework */,
+				3EDC877E1147FD5800605E37 /* CoreLocation.framework */,
 			);
 			name = "Linked Frameworks";
 			sourceTree = "<group>";
@@ -360,6 +369,7 @@
 				3EF5F5D1114463F4002ADC57 /* SBJsonBase.m in Sources */,
 				3EF5F5D2114463F4002ADC57 /* SBJsonParser.m in Sources */,
 				3EF5F5D3114463F4002ADC57 /* SBJsonWriter.m in Sources */,
+				3EDC87361147FA7100605E37 /* CLLocation-Utilities.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

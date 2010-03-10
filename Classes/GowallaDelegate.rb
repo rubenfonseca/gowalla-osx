@@ -23,7 +23,7 @@ class GowallaDelegate
   end
   
   def applicationWillTerminate(notification)
-    @locationManager.stopUpdatingLocation
+    @locationManager.stopUpdatingLocation if @locationManager
   end
   
   # Credentials delegate
@@ -46,51 +46,63 @@ class GowallaDelegate
   def hideCredentials(sender)
 	NSApp.endSheet(credentials_window)
 	credentials_window.orderOut(sender)
+	NSApp.terminate(sender)
   end
   
   # Webscript Callable methods
   def searchAddress(northeast, southwest)
+	progressView.startAnimation(self)
 	@client.list_spots(:sw => southwest, :ne => northeast) do |response|
 		showSpots(response)
+		progressView.stopAnimation(self) unless @locationManager
 	end
   end
   
   def geocodeAddress(sender)
+	@locationManager.stopUpdatingLocation
+	
+	progressView.startAnimation(self)
 	self.webView.stringByEvaluatingJavaScriptFromString("geocode(\"#{sender.stringValue}\");")
   end
   
   def updateMap(latitude, longitude)
 	@client.list_spots(:lat => latitude, :lng => longitude) do |response|
 		showSpots(response)
+		progressView.stopAnimation(self)
 	end
   end
   
   def checkin(spot_id, lat, lng)
+    progressView.startAnimation(self)
 	@client.checkin(:spot_id => spot_id, :lat => lat, :lng => lng) do |response|
 	  CheckinResultView.new.showCheckin(main_window, response)
-	  puts "Success :)"
+	  progressView.stopAnimation(self)
+	  NSLog("Success :)")
 	end
   end
      
   # WebScript informal protocol
   def self.isSelectorExcludedFromWebScript(selector)
-	puts "excluded? #{selector}"
 	false
   end
-  
-  def self.isKeyExcludedFromWebScript(name)
-    puts "key? #{name}"
-	false
-  end
-  
+ 
   # Location delegate
   def locationManager(manager, didUpdateToLocation:newLocation, fromLocation:oldLocation)
+    updateMap(newLocation.betterCoordinates['latitude'].doubleValue, newLocation.betterCoordinates['longitude'].doubleValue)
 	self.progressView.stopAnimation(self)
+	self.searchField.cell.setPlaceholderString("")
+	
+	@locationManager.stopUpdatingLocation
+	@locationManager = nil
   end
   
   def locationManager(manager, didFailWithError:error)
-	puts error.localizedDescription
+	NSLog(error.localizedDescription)
 	self.progressView.stopAnimation(self)
+	self.searchField.cell.setPlaceholderString("Couldn't find your location")
+	
+	@locationManager.stopUpdatingLocation
+	@locationManager = nil
   end
   
   private
