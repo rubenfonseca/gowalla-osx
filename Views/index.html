@@ -39,7 +39,7 @@
 			
 			google.maps.event.addListener(map, 'dragend', update_map);
 			google.maps.event.addListener(map, 'idle', update_map);
-			google.maps.event.addListener(map, 'idle', function() {
+			google.maps.event.addListenerOnce(map, 'idle', function() {
 			  window.gowalladelegate.startLocating_();
 			});
 		});

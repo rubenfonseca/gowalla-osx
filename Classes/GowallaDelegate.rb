@@ -90,7 +90,7 @@ class GowallaDelegate
   end
 
   # Location delegate
-  def locationManager(manager, didUpdateToLocation:newLocation, fromLocation:oldLocation)
+  def locationManager(manager, didUpdateToLocation:newLocation, fromLocation:oldLocation)  
     self.webView.stringByEvaluatingJavaScriptFromString("map.panTo(new google.maps.LatLng(#{newLocation.betterCoordinates['latitude'].doubleValue}, #{newLocation.betterCoordinates['longitude'].doubleValue}));")
     updateMap(newLocation.betterCoordinates['latitude'].doubleValue, newLocation.betterCoordinates['longitude'].doubleValue)
     self.progressView.stopAnimation(self)
