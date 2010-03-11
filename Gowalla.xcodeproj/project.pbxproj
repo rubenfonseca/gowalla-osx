@@ -56,6 +56,7 @@
 		3EDC877F1147FD5800605E37 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EDC877E1147FD5800605E37 /* CoreLocation.framework */; };
 		3EE2302E1141D34D00933AAB /* GowallaDelegate.rb in Resources */ = {isa = PBXBuildFile; fileRef = 3EE2302D1141D34D00933AAB /* GowallaDelegate.rb */; };
 		3EE230341141D39600933AAB /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EE230331141D39600933AAB /* WebKit.framework */; };
+		3EECE9EF1149B37C002A53BC /* gowalla.icns in Resources */ = {isa = PBXBuildFile; fileRef = 3EECE9EE1149B37C002A53BC /* gowalla.icns */; };
 		3EF000C7114587B300BCF241 /* Gems in Resources */ = {isa = PBXBuildFile; fileRef = 3EF000A8114587B300BCF241 /* Gems */; };
 		3EF5F5CE114463F4002ADC57 /* NSObject+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EF5F5C3114463F4002ADC57 /* NSObject+SBJSON.m */; };
 		3EF5F5CF114463F4002ADC57 /* NSString+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EF5F5C5114463F4002ADC57 /* NSString+SBJSON.m */; };
@@ -102,6 +103,7 @@
 		3EDC877E1147FD5800605E37 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = /System/Library/Frameworks/CoreLocation.framework; sourceTree = "<absolute>"; };
 		3EE2302D1141D34D00933AAB /* GowallaDelegate.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = GowallaDelegate.rb; sourceTree = "<group>"; };
 		3EE230331141D39600933AAB /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		3EECE9EE1149B37C002A53BC /* gowalla.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = gowalla.icns; sourceTree = "<group>"; };
 		3EF000A8114587B300BCF241 /* Gems */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Gems; sourceTree = "<group>"; };
 		3EF5F5C1114463F4002ADC57 /* JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSON.h; sourceTree = "<group>"; };
 		3EF5F5C2114463F4002ADC57 /* NSObject+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SBJSON.h"; sourceTree = "<group>"; };
@@ -215,6 +217,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				3EECE9EE1149B37C002A53BC /* gowalla.icns */,
 				3EDC86A61147EE6800605E37 /* Views */,
 				3EF000A8114587B300BCF241 /* Gems */,
 				2BFA9DA510CDF852007972A1 /* MainMenu.xib */,
@@ -321,6 +324,7 @@
 				3E7644241147DED900D49E69 /* CheckinResult.xib in Resources */,
 				3EDC86AA1147EE6800605E37 /* index.html in Resources */,
 				3EDC86C11147F34900605E37 /* NSStringAdditions.rb in Resources */,
+				3EECE9EF1149B37C002A53BC /* gowalla.icns in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
