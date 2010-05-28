@@ -30,7 +30,7 @@ class GowallaDelegate
   # Credentials delegate
   def submitCredentials(sender)
     self.progressView.startAnimation(self)
-
+    
     loadMap
 
     @client = Gowalla.new(username_field.stringValue, password_field.stringValue)
@@ -109,9 +109,7 @@ class GowallaDelegate
 
   private
   def loadMap
-    template = NSString.stringWithContentsOfFile(NSBundle.mainBundle.pathForResource("index", ofType:"html"),
-    encoding: NSUTF8StringEncoding,
-    error: nil)
+    template = IO.read(NSBundle.mainBundle.pathForResource("index", ofType:"html"))
 
     html = ERB.new(template)
     self.webView.mainFrame.loadHTMLString(html.result(binding), baseURL:nil)

@@ -18,7 +18,8 @@ class Gowalla
       :credential => { :user => @username, :password => @password },
       :headers => {
         'Accept' => 'application/json, text/javascript, application/json',
-        'X-Gowalla-API-Key' => 'feb0123be2754b61b474a41b80d88c38'
+        'X-Gowalla-API-Key' => 'feb0123be2754b61b474a41b80d88c38',
+        'Authorization' => "Basic #{(username + ':' + password).dataUsingEncoding(NSUTF8StringEncoding).base64Encoding}"
       }
     }
   end
